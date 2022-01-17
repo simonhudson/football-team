@@ -6,7 +6,7 @@ import Theme from '~/theme';
 import { GlobalStyles } from '~/theme/global.styles';
 
 // Log accessibility issues to console in non-production environments
-if (process.env.APP_ENV !== 'production' && typeof window !== 'undefined') {
+if (process.env.ENV !== 'production' && typeof window !== 'undefined') {
 	const ReactDOM = require('react-dom');
 	const axe = require('react-axe');
 	axe(React, ReactDOM, 1000);
