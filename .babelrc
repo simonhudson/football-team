@@ -8,7 +8,7 @@
             {
                 "paths": [{
                         "rootPathPrefix": "~",
-                        "rootPathSuffix": "components"
+                        "rootPathSuffix": "src"
                     }
                 ]
             }
