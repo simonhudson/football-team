@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "eslint -c .eslintrc \"pages/\" --ext .js,.jsx",
+    "start": "next start",
+    "test": ""
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/simonhudson/football-team/issues"
   },
-  "homepage": "https://github.com/simonhudson/football-team#readme"
+  "homepage": "https://github.com/simonhudson/football-team#readme",
+  "dependencies": {
+    "next": "^12.0.8",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.7.0"
+  }
 }
