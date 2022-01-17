@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Home = () => {
+const Home = (props) => {
 	return <p>Welcome to {process.env.TEAM_NAME}</p>;
 };
 
