@@ -19,26 +19,8 @@ const GlobalStyles = createGlobalStyle`
     }
 
     html {
-        border-top: ${rem(10)} solid ${palette.primary.brand};
         color: ${palette.bodyText};
         position: relative;
-    }
-
-    html::before {
-        background-color: #F4EBD9;
-        background-image:
-            radial-gradient(#EC7114 1px, transparent 1px),
-            radial-gradient(#EC7114 1px, #fff 1px);
-        background-position: 0 0, 20px 20px;
-        background-size: 40px 40px;
-        content: '';
-        height: 100%;
-        left: 0;
-        opacity: 0.25;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: -1;
     }
 
     ul, ol, dl {
