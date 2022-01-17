@@ -1,9 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Icon = (props) => {
-	if (!props.type) return null;
+const Icon = ({ type }) => {
+	return <span className={`fa fa-${type}`} aria-hidden="true" data-test="icon"></span>;
+};
 
-	return <span className={`fa fa-${props.type}`} aria-hidden="true" data-test="icon"></span>;
+Icon.propTypes = {
+	type: PropTypes.string.isRequired,
 };
 
 export default Icon;

@@ -6,6 +6,8 @@ import Theme from '~/theme';
 import { GlobalStyles } from '~/theme/global.styles';
 import routes from '~/config/routes';
 
+import SubNavigation from '~/components/sub-navigation';
+
 import SiteHeader from '~/components/site-header';
 
 // Log accessibility issues to console in non-production environments
@@ -31,7 +33,7 @@ const App = ({ Component, pageProps }) => {
 		pageTitle: getPageTitle(),
 	};
 
-	let pageTitle = `${pageProps.currentPage.pageTitle} | ${process.env.TEAM_NAME}`;
+	const pageTitle = `${pageProps.currentPage.pageTitle} | ${process.env.TEAM_NAME}`;
 
 	return (
 		<>
@@ -45,6 +47,7 @@ const App = ({ Component, pageProps }) => {
 					{pageProps.currentPage.route !== '/' && <h1>{pageProps.currentPage.pageTitle}</h1>}
 					<Component {...pageProps} />
 				</main>
+				<SubNavigation pageId={pageProps.currentPage.name} />
 			</ThemeProvider>
 		</>
 	);

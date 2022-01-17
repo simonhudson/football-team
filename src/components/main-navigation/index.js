@@ -4,6 +4,7 @@ import MainNavigationToggle from './toggle';
 import routes from '~/config/routes';
 import { Wrapper, Overlay, List, Item, ItemLink } from './index.styles';
 import { layout } from '~/theme';
+import getSubRoutes from '~/utils/getSubRoutes';
 
 const MainNavigation = ({ currentPage }) => {
 	const [isVisible, setIsVisible] = useState(false);
@@ -22,8 +23,6 @@ const MainNavigation = ({ currentPage }) => {
 		setIsVisible(!isVisible);
 		toggleScroll();
 	};
-
-	const getSubRoutes = (itemId) => routes.filter((route) => route.parentRoute === itemId);
 
 	return (
 		<>
