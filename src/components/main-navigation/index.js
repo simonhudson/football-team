@@ -4,7 +4,6 @@ import MainNavigationToggle from './toggle';
 import routes from '~/config/routes';
 import { Wrapper, Overlay, List, Item, ItemLink } from './index.styles';
 import { layout } from '~/theme';
-import getSubRoutes from '~/utils/getSubRoutes';
 
 const MainNavigation = ({ currentPage }) => {
 	const [isVisible, setIsVisible] = useState(false);
@@ -35,7 +34,6 @@ const MainNavigation = ({ currentPage }) => {
 							.filter((route) => !route.parentRoute)
 							.map((item, index) => {
 								if (item.omitFromNavigation) return null;
-								const subRoutes = getSubRoutes(item.id);
 								return (
 									<Item key={index}>
 										<Link href={item.href}>
@@ -47,13 +45,6 @@ const MainNavigation = ({ currentPage }) => {
 												{item.label}
 											</ItemLink>
 										</Link>
-										{subRoutes && (
-											<ul>
-												{subRoutes.map((subRoute, index) => {
-													<li>{subRoute.label}</li>;
-												})}
-											</ul>
-										)}
 									</Item>
 								);
 							})}
